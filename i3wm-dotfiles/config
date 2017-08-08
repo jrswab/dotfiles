@@ -205,7 +205,7 @@ bindsym $mod+shift+x exec i3lock -c "$bg-color"
 
 #These load on start up
 exec_always feh --bg-scale $bg-image
-exec xrandr --output HDMI-1 --mode 1360x768 --pos 1920x312 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-D-1 --off
+exec xrandr --output HDMI-1 --mode 1360x768 --pos 0x312 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --primary --mode 1920x1080 --pos 1360x0 --rotate normal --output DVI-D-1 --off
 
 # Audio Keys and Keybindings
   # Pulse Audio controls via pamixer
