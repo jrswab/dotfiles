@@ -1,0 +1,9 @@
+#!/bin/bash
+ln -sf ~/dotfiles/i3wm-dotfiles/config ~/.config/i3/config
+ln -sf ~/dotfiles/i3wm-dotfiles/i3blocks.conf ~/.config/i3/i3blocks.conf
+ln -sf ~/dotfiles/vimRC ~/.vimrc
+ln -sf ~/dotfiles/vim ~/.vim
+ln -sf ~/dotfiles/vim/colors ~/.vim/colors
+ln -sf ~/dotfiles/vim/autoload ~/.vim/autoload
+ln -sf ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/tmuxConf ~/.tmux.conf

@@ -1,0 +1,47 @@
+"no arrow keys
+no <up> <Nop>
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+
+ino <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+
+vno <up> <Nop>
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+
+" Interface Options 
+set number
+set relativenumber
+set noerrorbells
+set cursorline
+set ruler
+set laststatus=2 
+set title
+set linebreak
+colorscheme molokai
+let g:molokai_original = 1
+
+" Search 
+set hlsearch
+set ignorecase
+set smartcase
+
+" File-type specific indenting
+set autoindent
+
+" Setting Tabs 
+set tabstop=4
+set softtabstop=0
+set noexpandtab
+set shiftwidth=4
+
+" Miscellaneous Options
+set history=1000
+nnoremap ; :
+cmap w!! w !sudo tee % >/dev/null
+syntax on
