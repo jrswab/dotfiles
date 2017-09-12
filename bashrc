@@ -122,6 +122,7 @@ export PS1="[\[$(tput sgr0)\]\[\033[38;5;40m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\
 export PS1="[\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]\[\033[38;5;39m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]] \[$(tput sgr0)\]"
 
 alias tmux='tmux -2'
+alias vim='nvim'
 
 # Remap capsLk to CTRL
 setxkbmap -layout us -option ctrl:nocaps
