@@ -3,6 +3,9 @@ unbind C-b
 set-option -g prefix C-a
 bind-key C-a send-prefix
 
+# limit escape wait time
+set -sg escape-time 0
+
 # reload config
 #unbind r
 bind r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded."
