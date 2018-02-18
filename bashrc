@@ -125,7 +125,7 @@ alias tmux='tmux -2'
 alias vim='nvim'
 
 # Remap capsLk to ESC
-setxkbmap -layout us -option esc:nocaps
+setxkbmap -option escape:caps
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/jaron/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/jaron/Downloads/google-cloud-sdk/path.bash.inc'; fi
