@@ -124,8 +124,8 @@ export PS1="[\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]
 alias tmux='tmux -2'
 alias vim='nvim'
 
-# Remap capsLk to CTRL
-setxkbmap -layout us -option ctrl:nocaps
+# Remap capsLk to ESC
+setxkbmap -layout us -option esc:nocaps
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/jaron/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/jaron/Downloads/google-cloud-sdk/path.bash.inc'; fi
@@ -135,3 +135,7 @@ if [ -f '/home/jaron/Downloads/google-cloud-sdk/completion.bash.inc' ]; then sou
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export AMDAPPSDKROOT="/home/jaron/AMDAPPSDK-3.0"
+
+# added by Anaconda3 installer
+export PATH="/home/jaron/anaconda3/bin:$PATH"

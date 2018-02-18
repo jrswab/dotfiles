@@ -1,3 +1,20 @@
+" !!! Start plugin synatx !!!
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'mikewest/vimroom'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+" !!! End Plugin Syntax !!!
+
 "no arrow keys
 no <up> <Nop>
 no <down> <Nop>
@@ -20,9 +37,9 @@ set relativenumber
 set noerrorbells
 set cursorline
 set ruler
-set laststatus=2 
 set title
 set linebreak
+set showmatch " highlight matching {}[]() etc.
 colorscheme molokai
 let g:molokai_original = 1
 
@@ -30,6 +47,7 @@ let g:molokai_original = 1
 set hlsearch
 set ignorecase
 set smartcase
+set incsearch " search while typing
 
 " File-type specific indenting
 set autoindent
@@ -40,8 +58,18 @@ set softtabstop=0
 set noexpandtab
 set shiftwidth=4
 
+" Status Line
+set laststatus=2
+set statusline=
+set statusline+=%f " file
+set statusline+=\ -\ " separator
+set statusline+=FileType: " label
+set statusline+=%y " File type of file
+
+" Leader Keybindings
+let mapleader=","
+noremap <leader>q :wq<cr>
+
 " Miscellaneous Options
 set history=1000
-nnoremap ; :
-cmap w!! w !sudo tee % >/dev/null
 syntax on
