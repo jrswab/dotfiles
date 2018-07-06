@@ -1,0 +1,11 @@
+[redshift]
+; set day and night temps
+temp-day=5000
+temp-night=3000
+
+;Enable smooth transistion
+transition=1
+
+;set screen brightness
+brightness-day=0.9
+brightness-night=0.8
