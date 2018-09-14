@@ -1,4 +1,5 @@
 [redshift]
+location-provider=manual
 ; set day and night temps
 temp-day=5000
 temp-night=3000
@@ -9,3 +10,7 @@ transition=1
 ;set screen brightness
 brightness-day=0.9
 brightness-night=0.8
+
+[manual]
+lat=40.56
+lon=-79.96

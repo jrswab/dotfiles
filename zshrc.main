@@ -98,4 +98,6 @@ alias tmux="tmux -2"
 
 eval `dircolors ~/custom-setup/dircolors.256dark`
 
-export PS1="\[\033[38;5;71m\]\h\[$(tput sgr0)\]\[\033[38;5;249m\]:\[$(tput sgr0)\]\[\033[38;5;75m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;249m\]>>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+powerline-daemon -q
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh

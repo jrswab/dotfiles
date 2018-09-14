@@ -9,7 +9,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mikewest/vimroom'
 Plugin 'wikitopian/hardmode'
-Plugin 'altercation/vim-colors-solarized'
+" Themes
+Plugin 'nightsense/stellarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,10 +43,10 @@ set ruler
 set title
 set linebreak
 set showmatch " highlight matching {}[]() etc.
-set background=dark
-colorscheme solarized
 "colorscheme molokai
 "let g:molokai_original = 1
+colorscheme stellarized
+set background=dark
 
 " Search 
 set hlsearch
@@ -84,3 +85,6 @@ map <C-v> "+P
 " Miscellaneous Options
 set history=1000
 syntax on
+
+" Powerline
+"let g:powerline_pycmd="py3"
