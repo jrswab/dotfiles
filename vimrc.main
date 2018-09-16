@@ -10,7 +10,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mikewest/vimroom'
 Plugin 'wikitopian/hardmode'
 " Themes
-Plugin 'nightsense/stellarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,10 +42,8 @@ set ruler
 set title
 set linebreak
 set showmatch " highlight matching {}[]() etc.
-"colorscheme molokai
-"let g:molokai_original = 1
-colorscheme stellarized
-set background=dark
+colorscheme molokai
+let g:molokai_original = 1
 
 " Search 
 set hlsearch
@@ -56,6 +53,7 @@ set incsearch " search while typing
 
 " Tab-competion for file-related tasks
 set path+=**
+
 " Display all matching file on tab complete
 set wildmenu
 
@@ -81,15 +79,11 @@ let mapleader=","
 noremap <leader>q :wq<cr>
 inoremap <leader>. <Esc>
 vnoremap <leader>. <Esc>
-
-" Copy & Past Keybindings
-" ctrl+c copies to both clipboard and primary selection
-vnoremap <C-c> "*y :let @+=@*<CR>
-map <C-v> "+P
+" Read code template file
+" nnoremap <leader>python :-1read path/to/template<CR>
+" | n mode | type in vim | read contents into buffer
 
 " Miscellaneous Options
 set history=1000
 syntax on
 
-" Powerline
-"let g:powerline_pycmd="py3"
