@@ -54,14 +54,19 @@ set ignorecase
 set smartcase
 set incsearch " search while typing
 
+" Tab-competion for file-related tasks
+set path+=**
+" Display all matching file on tab complete
+set wildmenu
+
 " File-type specific indenting
 set autoindent
 
 " Setting Tabs 
-set tabstop=4
+set tabstop=2
 set softtabstop=0
 set noexpandtab
-set shiftwidth=4
+set shiftwidth=2
 
 " Status Line
 set laststatus=2
