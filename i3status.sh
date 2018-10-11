@@ -13,7 +13,7 @@ do
 	count=$((count + 1))
 	if ! ((count % 3600)); then
 		getTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | 
-			head -n 4 | tail -n 1 | awk '{ print $3 $4 }')
+			head -n 4 | tail -n 1 | awk '{ print $2 $3 $4 }')
 	fi
 
 	sleep 1
