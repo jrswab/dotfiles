@@ -5,8 +5,10 @@ getTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | head -n 4 | tail -n
 
 while :
 do
+	# get RAM
+	ram=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
 	# send data to output
-	(echo "${getTemp}";echo ' | ';date +%b' '%d' '%H':'%M)|tr -d '\n'
+	(echo "${ram}";echo ' | ';echo "${getTemp}";echo ' | ';date +%b' '%d' '%H':'%M)|tr -d '\n'
 	
 	# get weather update every hour
 	count=$((count + 1))

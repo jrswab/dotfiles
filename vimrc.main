@@ -9,7 +9,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mikewest/vimroom'
 Plugin 'wikitopian/hardmode'
-" Themes
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+" themes
+Plugin 'vim-scripts/xoria256.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,8 +46,14 @@ set ruler
 set title
 set linebreak
 set showmatch " highlight matching {}[]() etc.
-colorscheme molokai
-let g:molokai_original = 1
+"colorscheme molokai
+"let g:molokai_original = 1
+colorscheme xoria256
+" More Colors for GO
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
 
 " Search 
 set hlsearch
