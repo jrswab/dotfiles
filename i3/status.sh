@@ -2,7 +2,9 @@
 # Set Initial Conditions
 count=0
 
-getTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | head -n 4 | tail -n 1 | sed 's/ //g' | sed -r 's/[-0-9]+°F/&~&/g' | cut -d '~' -f2)
+getTemp=$(curl 'wttr.in/~15101?format=2')
+
+#oldgetTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | head -n 4 | tail -n 1 | sed 's/ //g' | sed -r 's/[-0-9]+°F/&~&/g' | cut -d '~' -f2)
 
 ram=$(free -h | awk '/^Mem:/ {print $3}')
 #ram=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
@@ -13,7 +15,7 @@ while :
 do
 	# get weather update every hour
 	if ! ((count % 3600)); then
-		getTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | head -n 4 | tail -n 1 | sed 's/ //g' | sed -r 's/[-0-9]+°F/&~&/g' | cut -d '~' -f2)
+		getTemp=$(curl 'wttr.in/~15101?format=2')
 	fi
 
 	if ! ((count % 30)); then
