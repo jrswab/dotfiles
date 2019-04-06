@@ -1,7 +1,7 @@
 #!/bin/bash
 # Set Initial Conditions
 count=0
-
+vortoDeLaTago=$(shuf -n 1 /home/jaron/Documents/esperanto/superaMilVorto)
 getTemp=$(curl 'wttr.in/~15101?format=2')
 
 #oldgetTemp=$(curl -s 'https://wttr.in/~15101?u0T' | tac | tac | head -n 4 | tail -n 1 | sed 's/ //g' | sed -r 's/[-0-9]+°F/&~&/g' | cut -d '~' -f2)
@@ -26,7 +26,7 @@ do
 	fi
 
 	# send data to output
-	(echo " ${maxRam}";echo "$appRam% of ${ram}";echo ' | ';echo "${getTemp}";echo ' | ';date +%b' '%d' '%H':'%M)|tr -d '\n'
+	(echo "${vortoDeLaTago}"; echo " | "; echo" ${maxRam}";echo "$appRam% of ${ram}";echo ' | ';echo "${getTemp}";echo ' | ';date +%b' '%d' '%H':'%M)|tr -d '\n'
 
 	count=$((count + 1))
 	sleep 1
