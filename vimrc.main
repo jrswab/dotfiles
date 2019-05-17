@@ -12,6 +12,7 @@ Plugin 'wikitopian/hardmode'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
+Plugin 'koalaman/shellcheck'
 " themes
 Plugin 'vim-scripts/xoria256.vim'
 " All of your Plugins must be added before the following line
