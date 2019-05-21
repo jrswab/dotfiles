@@ -28,7 +28,9 @@ do
 	fi
 
 	# send data to output
-	(echo "$count"; echo " | "; echo "${vortoDeLaTago}"; echo " | "; echo "${maxRam}"; echo "${appRam}% of ${ram}";echo ' | ';echo "${getTemp}";echo ' | ';date +%s; echo ' | ';date +%b' '%d' '%H':'%M)|tr -d '\n'
+	xsetroot -name "$(echo "$count"|tr -d ' ';echo " | ";echo "${vortoDeLaTago}";
+	  echo " | ";echo "${maxRam}";echo "${appRam}% of ${ram}";echo ' | ';
+		echo "${getTemp}";echo ' | ';date +%s;echo ' | ';date +%b' '%d' '%H':'%M)"|tr -d '\n'
 
 	count=$((count + 1))
 	sleep 1

@@ -10,7 +10,7 @@ temp-night=2000
 transition=1
 
 ;set screen brightness
-brightness-day=0.9
+;brightness-day=0.9
 brightness-night=0.8
 
 ; Set the adjustment-method: 'randr', 'vidmode'

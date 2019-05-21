@@ -92,11 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
+alias surf="./suckless/surf -SPIgfa a"
 
 eval `dircolors ~/custom-setup/dircolors.256dark`
 
-#powerline-daemon -q
-#. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
