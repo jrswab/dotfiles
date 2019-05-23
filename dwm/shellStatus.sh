@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# DEPRICATED: dwmStatusBar is used; written and compiled with Go
+# DEPRECATED: dwmStatusBar is used; written and compiled with Go
 # To view the source head to https://gitlab.com/jrswab/dwm-status
 
 # Set Initial Conditions
