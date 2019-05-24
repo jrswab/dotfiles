@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
-alias surf="./suckless/surf -SPIgfa a"
+alias surf="./suckless/surf -SPIMgf"
 
 eval `dircolors ~/custom-setup/dircolors.256dark`
 
