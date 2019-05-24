@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# DEPRECATED: Use dwmStatusBar.
+# Vritten and compiled with Go.
+# To view the source head to https://gitlab.com/jrswab/dwm-status
+
 # Set Initial Conditions
 vortoDeLaTago=$(shuf -n 1 "$HOME"/custom-setup/superaMilVorto)
 getTemp=$(curl 'wttr.in/~15101?format=2')
