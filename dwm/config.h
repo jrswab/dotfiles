@@ -1,11 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=14" };
+static const char *fonts[]          = { "Source Code Pro:size=13" };
 static const char dmenufont[]       = "Source Code Pro:size=14";
 /* All colors from Ethan Schoonover's color scheme */
 static const char base0[]           = "#839496"; /* body text */
@@ -23,9 +23,9 @@ static const char cyan[]            = "#2aa198";
 static const char green[]           = "#859900";
 static const char magenta[]         = "#d33682";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
+	/*               fg      bg     border   */
 	[SchemeNorm] = { base0, base03, base00 },
-	[SchemeSel]  = { base1, base02,  magenta  },
+	[SchemeSel]  = { base1, base02, green },
 };
 
 /* tagging */
@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	/*{ "Gimp",     NULL,       NULL,       0,            1,           -1 },*/
 	{ "Bitwarden",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -67,15 +67,15 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {  "/home/jaron/suckless/dmenu/dmenu_run", "-m", dmenumon, 
-	"-fn", dmenufont, "-nb", base03, "-nf", base0, "-sb", base02, "-sf", base1, NULL };
+	"-fn", dmenufont, "-nb", base03, "-nf", base0, "-sb", green, "-sf", base1, NULL };
 static const char *termcmd[]  = { "/home/jaron/suckless/st/st", NULL };
-static const char *status[] = { "/home/jaron/custom-setup/dwm/dwmStatusBar", NULL };
+static const char *setupcmd[] = { "/home/jaron/custom-setup/dwm/start.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = status } },/*User Added*/
+	{ MODKEY,                       XK_s,      spawn,          {.v = setupcmd } },/*User Added*/
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

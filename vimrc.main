@@ -81,9 +81,11 @@ set shiftwidth=2
 set laststatus=2
 set statusline=
 set statusline+=%f " file
-set statusline+=\ -\ " separator
+set statusline+=\ -\ " "separator
 set statusline+=FileType: " label
 set statusline+=%y " File type of file
+set statusline+=\ -\ " " separator
+set statusline+=col:\ %c " Column numbers
 
 " Leader Keybindings
 let mapleader=","
