@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=13" };
+static const char *fonts[]          = { "Source Code Pro:size=13", "FontAwesome:size=14" };
 static const char dmenufont[]       = "Source Code Pro:size=14";
 /* All colors from Ethan Schoonover's color scheme */
 static const char base0[]           = "#839496"; /* body text */
@@ -25,7 +25,7 @@ static const char magenta[]         = "#d33682";
 static const char *colors[][3]      = {
 	/*               fg      bg     border   */
 	[SchemeNorm] = { base0, base03, base00 },
-	[SchemeSel]  = { base1, base02, green },
+	[SchemeSel]  = { base1, base02, cyan },
 };
 
 /* tagging */
@@ -67,15 +67,20 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {  "/home/jaron/suckless/dmenu/dmenu_run", "-m", dmenumon, 
-	"-fn", dmenufont, "-nb", base03, "-nf", base0, "-sb", green, "-sf", base1, NULL };
+	"-fn", dmenufont, "-nb", base03, "-nf", base0, "-sb", cyan, "-sf", base03, NULL };
+// user added
 static const char *termcmd[]  = { "/home/jaron/suckless/st/st", NULL };
-static const char *setupcmd[] = { "/home/jaron/custom-setup/dwm/start.sh", NULL };
+static const char *start[] = { "/home/jaron/custom-setup/dwm/start.sh", NULL };
+static const char *volup[] = { "amixer -D pulse sset Master 5%+ > /dev/null", NULL };
+static const char *voldn[] = { "/home/jaron/custom-setup/voldn.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = setupcmd } },/*User Added*/
+	{ MODKEY,                       XK_s,      spawn,          {.v = start } }, /*User Added*/
+	{ MODKEY|ShiftMask,							XK_v,			 spawn, 				 {.v = volup } }, /*User Added*/
+	{ MODKEY,												XK_v,			 spawn, 				 {.v = voldn } }, /*User Added*/
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -89,8 +94,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	/*{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },*/
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },

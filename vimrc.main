@@ -7,10 +7,10 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'mikewest/vimroom'
+"Plugin 'mikewest/vimroom'
 Plugin 'wikitopian/hardmode'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
 Plugin 'koalaman/shellcheck'
 " themes
@@ -40,17 +40,15 @@ vno <right> <Nop>
 
 " Interface Options 
 set number
-set relativenumber
+" set relativenumber
 set noerrorbells
 set cursorline
 set ruler
 set title
 set linebreak
 set showmatch " highlight matching {}[]() etc.
-"colorscheme molokai
-"let g:molokai_original = 1
 colorscheme xoria256
-" More Colors for GO
+" More Colors for Golang
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
@@ -72,29 +70,27 @@ set wildmenu
 set autoindent
 
 " Setting Tabs 
-set tabstop=2
-set softtabstop=0
-set noexpandtab
-set shiftwidth=2
+set tabstop=2     " How many columns a tab counts for
+set shiftwidth=2  " Display of vim tab commands such as `>` and `<`
+set softtabstop=0 " Display tab width as 2 spaces within insert mode
+set noexpandtab   " Don't change tabs to spaces
 
 " Status Line
 set laststatus=2
 set statusline=
-set statusline+=%f " file
-set statusline+=\ -\ " "separator
+set statusline+=%f        " file
+set statusline+=\ -\ "    " separator
 set statusline+=FileType: " label
-set statusline+=%y " File type of file
-set statusline+=\ -\ " " separator
-set statusline+=col:\ %c " Column numbers
+set statusline+=%y        " File type of file
+set statusline+=\ -\ "    " separator
+set statusline+=col:\ %c  " Column numbers
 
 " Leader Keybindings
 let mapleader=","
 noremap <leader>q :wq<cr>
+"" Best used with Programmer Dvorak keyboard layout
 inoremap <leader>. <Esc>
 vnoremap <leader>. <Esc>
-" Read code template file
-" nnoremap <leader>python :-1read path/to/template<CR>
-" | n mode | type in vim | read contents into buffer
 
 " Miscellaneous Options
 set history=1000
