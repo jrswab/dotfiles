@@ -1,0 +1,79 @@
+/* From Ethan Schoonover's Solarized Color Scheme: */
+:root {
+	--base03:    #002b36; /*brblack*/
+  --base02:    #073642; /*black*/
+  --base01:    #586e75; /*brgreen*/
+  --base0:     #657b83; /*bryellow*/
+  --base0:     #839496; /*brblue*/
+  --base1:     #93a1a1; /*brcyan*/
+  --base2:     #eee8d5; /*white*/
+  --base3:     #fdf6e3; /*brwhite*/
+  --syellow:   #b58900;
+  --brred:     #cb4b16;
+  --sred:      #dc322f;
+  --smagenta:  #d33682;
+  --brmagenta: #6c71c4;
+  --sblue:     #268bd2;
+  --scyan:     #2aa198;
+  --sgreen:    #859900;
+}
+a {
+  color: var(--sgreen) !important;
+}
+a:focus, a:active, a:visited, a:hover {
+  color: var(--base01) !important;
+}
+html, * {
+  background-color: var(--base03) !important;
+  color: var(--base0) !important;
+}
+body, * {
+  background-color: var(--base03) !important;
+  color: var(--base0) !important;
+}
+h1 {
+  color: var(--base0) !important;
+}
+h2, h3, h4, h5, h6 {
+  color: var(--base0) !important;
+}
+code {
+  background-color: var(--base02) !important;
+	padding: 0px 3px 0px 3px !important;
+}
+/*
+.tag {
+  background-color: #073642 !important;
+  color: #d33682 !important;
+}
+.todo,
+.next,
+.done {
+  color: #002b36 !important;
+  background-color: #dc322f !important;
+}
+.TODO {
+  background-color: #2aa198 !important;
+}
+.NEXT {
+  background-color: #268bd2 !important;
+}
+.ACTIVE {
+  background-color: #268bd2 !important;
+}
+.DONE {
+  background-color: #859900 !important;
+}
+.WAITING {
+  background-color: #cb4b16 !important;
+}
+.HOLD {
+  background-color: #d33682 !important;
+}
+.NOTE {
+  background-color: #d33682 !important;
+}
+.CANCELLED {
+  background-color: #859900 !important;
+}
+*/
