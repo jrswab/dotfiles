@@ -1,10 +1,11 @@
 #!/bin/sh
+dir="$(pwd)"
 
-"$HOME"/custom-setup/dwm/xrander.sh; # script created with arander
+#"$dir"/dwm/xrander.sh; # script created with arander
 
-syncthing -no-browser &
+#syncthing -no-browser &
 
 #if [ "$(echo "$GDMSESSION" | awk '/dwm/')" = "dwm" ]; then
-	"$HOME"/custom-setup/dwm/dwmStatusBar; # start status bar
+	"$dir"/dwm/dwmStatusBar; # start status bar
 #fi
 

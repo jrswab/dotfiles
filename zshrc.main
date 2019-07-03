@@ -97,9 +97,6 @@ source $ZSH/oh-my-zsh.sh
 alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
-alias surf="surf -SpIMgf"
-alias gitlab="surf -SpIMgf gitlab.com"
-alias ddg="surf -SpIMgf ddg.gg"
 alias syncweb="surf -SpIMgf 127.0.0.1:8080"
 
-eval `dircolors ~/custom-setup/dircolors.256dark`
+eval `dircolors ~/dotfiles/dircolors.256dark`
