@@ -12,9 +12,11 @@ Plugin 'wikitopian/hardmode'
 Plugin 'vim-syntastic/syntastic'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
+"Plugin 'myitcv/govim'
 Plugin 'koalaman/shellcheck'
 " themes
-Plugin 'vim-scripts/xoria256.vim'
+"Plugin 'vim-scripts/xoria256.vim'
+Plugin 'arcticicestudio/nord-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,7 +49,7 @@ set ruler
 set title
 set linebreak
 set showmatch " highlight matching {}[]() etc.
-colorscheme xoria256
+colorscheme nord
 " More Colors for Golang
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1

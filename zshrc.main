@@ -92,14 +92,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+# Turn on Go Modules:
+#export GO111MODULE=on
 
 alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
-alias surf="surf -SpIMgf"
-alias gitlab="surf -SpIMgf gitlab.com"
-alias ddg="surf -SpIMgf ddg.gg"
 alias syncweb="surf -SpIMgf 127.0.0.1:8080"
+alias img="sxiv"
 
-eval `dircolors ~/custom-setup/dircolors.256dark`
+#eval `dircolors ~/custom-setup/dircolors.256dark`
