@@ -7,7 +7,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="theunraveler"
+#ZSH_THEME="theunraveler"
+ZSH_THEME="spaceship"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -67,6 +68,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:/home/jaron/go/bin:/home/jaron/dev/xi-editor/rust/target/release
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -94,12 +96,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Turn on Go Modules:
-#export GO111MODULE=on
+export GO111MODULE=on
 
 alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
-alias syncweb="surf -SpIMgf 127.0.0.1:8080"
 alias img="sxiv"
 
 #eval `dircolors ~/custom-setup/dircolors.256dark`

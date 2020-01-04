@@ -5,27 +5,33 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=13", "FontAwesome:size=14" };
-static const char dmenufont[]       = "Source Code Pro:size=14";
-/* All colors from Ethan Schoonover's color scheme */
-static const char base0[]           = "#839496"; /* body text */
-static const char base1[]           = "#93a1a1"; /* emphisized text */
-static const char base00[]          = "#657b83"; /* no example given */
-static const char base01[]          = "#586e75"; /* comments/secondary text */
-static const char base02[]          = "#073642"; /* background highlights */
-static const char base03[]          = "#002b36"; /* background */
-static const char yellow[]          = "#b58900";
-static const char orange[]          = "#cb4b16";
-static const char red[]             = "#dc322f";
-static const char violet[]          = "#6c71c4";
-static const char blue[]            = "#268bd2";
-static const char cyan[]            = "#2aa198";
-static const char green[]           = "#859900";
-static const char magenta[]         = "#d33682";
+static const char *fonts[]          = { "Hack:size=13", "FontAwesome:size=14" };
+static const char dmenufont[]       = "Hack:size=14";
+/* All colors from Nord color scheme */
+/* Polar Night Colors */
+static const char nord0[]           = "#2E3440";
+static const char nord1[]           = "#3B4252";
+static const char nord2[]           = "#434C54";
+static const char nord3[]           = "#4C566A";
+/* Snow Storm Colors */
+static const char nord4[]           = "#D8DEE9";
+static const char nord5[]           = "#E5E9F0";
+static const char nord6[]					  = "#ECEFF4";
+/* Frost Colors */
+static const char nord7[]           = "#8FBCBB"; /* Green Blue */
+static const char nord8[]           = "#88C0D0"; /* light Blue */
+static const char nord9[]           = "#81A1C1"; /* Grey Blue */
+static const char nord10[]          = "#5E81AC"; /* Dark Blue */
+/* */
+static const char nord11[]          = "#BF616A"; /* Red */
+static const char nord12[]          = "#D08770"; /* Orange */
+static const char nord13[]          = "#EBCB8B"; /* Yellow */
+static const char nord14[]          = "#A3BE8C"; /* Green */
+static const char nord15[]          = "#B48EAD"; /* Purple */
 static const char *colors[][3]      = {
 	/*               fg      bg     border   */
-	[SchemeNorm] = { base0, base03, base00 },
-	[SchemeSel]  = { base1, base02, cyan },
+	[SchemeNorm] = { nord3, nord1, nord2 },
+	[SchemeSel]  = { nord9, nord1, nord7 },
 };
 
 /* tagging */
@@ -67,7 +73,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {  "/home/jaron/suckless/dmenu/dmenu_run", "-m", dmenumon, 
-	"-fn", dmenufont, "-nb", base03, "-nf", base0, "-sb", cyan, "-sf", base03, NULL };
+	"-fn", dmenufont, "-nb", nord1, "-nf", nord3, "-sb", nord10, "-sf", nord1, NULL };
 // user added
 static const char *termcmd[]  = { "/home/jaron/suckless/st/st", NULL };
 static const char *start[] = { "/home/jaron/custom-setup/dwm/start.sh", NULL };
