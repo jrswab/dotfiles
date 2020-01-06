@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=DWM
-Name[eo]=DWM
-Comment=This session logs you into DWM
-Comment[eo]=Ĉi tiu seanco ensalutas vin al DWM
-Exec=/home/jaron/suckless/dwm/dwm
-Icon=
-Type=XSession
