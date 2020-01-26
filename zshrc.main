@@ -8,7 +8,14 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="theunraveler"
-ZSH_THEME="spaceship"
+
+# Check if Rio is the current window manager:
+WM="$(loginctl show-session $XDG_SESSION_ID | grep '^Desktop*' | sed 's/Desktop=//')"
+if [ "$WM" = "rio" ]; then
+  rc; # change shell to rc when running Rio
+else
+  ZSH_THEME="spaceship"
+fi
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -68,14 +75,15 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH=$PATH:/home/jaron/go/bin:/home/jaron/dev/xi-editor/rust/target/release
+export PATH=/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/jaron/go/bin:/home/jaron/.cargo/bin
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
+   export EDITOR='vim'
  else
    export EDITOR='nvim'
  fi
@@ -102,5 +110,6 @@ alias ls="ls -lh --color"
 alias vim="nvim"
 alias tmux="tmux -2"
 alias img="sxiv"
+alias 9="/usr/lib/plan9/bin/9"
 
 #eval `dircolors ~/custom-setup/dircolors.256dark`

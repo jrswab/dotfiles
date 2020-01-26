@@ -36,31 +36,34 @@ super + {_,shift + }{h,j,k,l}
 # 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # Below are set for use with "Programmer Dvorak" keyboard layout
-super + {_,shift +} parenleft
+alt + {_,shift +} asterisk
+	bspc {desktop -f,node -d} 0
+
+alt + {_,shift +} parenleft
 	bspc {desktop -f,node -d} 1
 
-super + {_,shift +} parenright
+alt + {_,shift +} parenright
 	bspc {desktop -f,node -d} 2
 
-super + {_,shift +} braceright
+alt + {_,shift +} braceright
 	bspc {desktop -f,node -d} 3
 
-super + {_,shift +} plus
+alt + {_,shift +} plus
 	bspc {desktop -f,node -d} 4
 
-super + {_,shift +} braceleft
+alt + {_,shift +} braceleft
 	bspc {desktop -f,node -d} 5
 
-super + {_,shift +} bracketright
+alt + {_,shift +} bracketright
 	bspc {desktop -f,node -d} 6
 
-super + {_,shift +} bracketleft
+alt + {_,shift +} bracketleft
 	bspc {desktop -f,node -d} 7
 
-super + {_,shift +} exclam
+alt + {_,shift +} exclam
 	bspc {desktop -f,node -d} 8
 
-super + {_,shift +} equal
+alt + {_,shift +} equal
 	bspc {desktop -f,node -d} 9
 
 # Send to monitor:
