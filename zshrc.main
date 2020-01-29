@@ -12,9 +12,10 @@
 # Check if Rio is the current window manager:
 WM="$(loginctl show-session $XDG_SESSION_ID | grep '^Desktop*' | sed 's/Desktop=//')"
 if [ "$WM" = "rio" ]; then
-  rc; # change shell to rc when running Rio
+	rc; # change shell to rc when running Rio
+	export PATH=/usr/lib/plan9/bin:/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/jaron/go/bin:/home/jaron/.cargo/bin
 else
-  ZSH_THEME="spaceship"
+	ZSH_THEME="spaceship"
 fi
 
 # Set list of themes to load
@@ -92,7 +93,7 @@ export PATH=/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
