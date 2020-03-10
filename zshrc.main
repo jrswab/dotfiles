@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/go/bin:$PATH:$HOME/go/bin
+
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/jaron/.oh-my-zsh
@@ -8,15 +10,16 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="theunraveler"
+ZSH_THEME="spaceship"
 
 # Check if Rio is the current window manager:
-WM="$(loginctl show-session $XDG_SESSION_ID | grep '^Desktop*' | sed 's/Desktop=//')"
-if [ "$WM" = "rio" ]; then
-	rc; # change shell to rc when running Rio
-	export PATH=/usr/lib/plan9/bin:/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/jaron/go/bin:/home/jaron/.cargo/bin
-else
-	ZSH_THEME="spaceship"
-fi
+#WM="$(loginctl show-session $XDG_SESSION_ID | grep '^Desktop*' | sed 's/Desktop=//')"
+#if [ "$WM" = "rio" ]; then
+#	rc; # change shell to rc when running Rio
+#	export PATH=/usr/lib/plan9/bin:/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/jaron/go/bin:/home/jaron/.cargo/bin
+#else
+#	ZSH_THEME="spaceship"
+#fi
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -73,12 +76,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-export PATH=/home/jaron/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/jaron/go/bin:/home/jaron/.cargo/bin
-
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -105,7 +102,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Turn on Go Modules:
-export GO111MODULE=on
+#export GO111MODULE=on
 
 alias ls="ls -lh --color"
 alias vim="nvim"

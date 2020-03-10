@@ -26,7 +26,8 @@ alt + {_,shift + }c
 super + g
 	bspc node -s biggest
 
-# focus the node in the given direction
+# super to focus on the next window
+# super + shift to move window
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 

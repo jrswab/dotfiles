@@ -2,16 +2,16 @@
 
 ; set day and night temps
 temp-day=4000
-temp-night=2000
+temp-night=2500
 
 ; Enable/Disable a smooth transition between day and night
 ; 0 will cause a direct change from day to night screen temperature.
 ; 1 will gradually increase or decrease the screen temperature
-transition=1
+transition=0
 
 ;set screen brightness
-;brightness-day=0.9
-brightness-night=0.9
+;brightness-day=1.00
+brightness-night=0.99
 
 ; Set the adjustment-method: 'randr', 'vidmode'
 ; type 'redshift -m list' to see all possible values
