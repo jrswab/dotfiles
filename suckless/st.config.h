@@ -85,6 +85,7 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
+	/* Nord Color Palette */
   /* 8 normal colors */
   [0] = "#3b4252", /* black   */
   [1] = "#bf616a", /* red     */
