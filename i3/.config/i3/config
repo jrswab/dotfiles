@@ -12,8 +12,8 @@
 set $mod Mod4
 
 exec --no-startup-id picom
-exec --no-startup-id screen_check.sh 
-exec_always --no-startup-id feh --bg-scale ~/Pictures/back_to_everforest.png
+exec --no-startup-id ~/.config/i3/init.sh
+exec_always --no-startup-id feh --bg-scale ~/Pictures/misty_forest.png
 
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
@@ -64,7 +64,7 @@ bindsym $mod+Return exec ~/bin/ghostty
 bindsym $mod+Shift+colon kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id dmenu_run
+bindsym $mod+space exec --no-startup-id dmenu_run -l 10 -nb "#2d353b" -nf "#d3c6aa" -sb "#a7c080" -sf "#2d353b" -fn "Atkinson Hyperlegible-16"
 # bindsym $mod+space exec "rofi -modi drun,run -show drun"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -136,6 +136,26 @@ set $ws8 "8"
 set $ws9 "9"
 
 # switch to workspace
+# Some keys need to have shift in order to access the symbol in DVP:
+# on the ZSA Voyager
+mode "zsa" {
+	bindsym $mod+Shift+8 workspace number $ws0
+	bindsym $mod+Shift+parenleft workspace number $ws1
+	bindsym $mod+Shift+0 workspace number $ws2
+	bindsym $mod+Shift+braceright workspace number $ws3
+	bindsym $mod+Shift+plus workspace number $ws4
+	bindsym $mod+Shift+braceleft workspace number $ws5
+	bindsym $mod+bracketright workspace number $ws6
+	bindsym $mod+bracketleft workspace number $ws7
+	bindsym $mod+Shift+exclam workspace number $ws8
+	bindsym $mod+equal workspace number $ws9
+
+	# Return to the default mode:
+  bindsym $mod+z mode "default"
+}
+# Start ZSA mode
+bindsym $mod+z mode "zsa"
+
 bindsym $mod+asterisk workspace number $ws0
 bindsym $mod+parenleft workspace number $ws1
 bindsym $mod+parenright workspace number $ws2
@@ -148,17 +168,16 @@ bindsym $mod+exclam workspace number $ws8
 bindsym $mod+equal workspace number $ws9
 
 # move focused container to workspace
-# TODO: Check these against the above workspace keybindings.
-#bindsym $mod+Shift+percent move container to workspace number $ws1
-#bindsym $mod+Shift+7 move container to workspace number $ws2
-#bindsym $mod+Shift+5 move container to workspace number $ws3
-#bindsym $mod+Shift+3 move container to workspace number $ws4
-#bindsym $mod+Shift+1 move container to workspace number $ws5
-#bindsym $mod+Shift+9 move container to workspace number $ws6
-#bindsym $mod+Shift+0 move container to workspace number $ws7
-#bindsym $mod+Shift+2 move container to workspace number $ws8
-#bindsym $mod+Shift+4 move container to workspace number $ws9
-#bindsym $mod+Shift+6 move container to workspace number $ws0
+#bindsym $mod+shift+0 move container to workspace number $ws0
+#bindsym $mod+shift+1 move container to workspace number $ws1
+#bindsym $mod+shift+2 move container to workspace number $ws2
+#bindsym $mod+shift+3 move container to workspace number $ws3
+#bindsym $mod+shift+4 move container to workspace number $ws4
+#bindsym $mod+shift+5 move container to workspace number $ws5
+#bindsym $mod+shift+6 move container to workspace number $ws6
+#bindsym $mod+shift+7 move container to workspace number $ws7
+#bindsym $mod+shift+8 move container to workspace number $ws8
+#bindsym $mod+shift+9 move container to workspace number $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+R reload
@@ -199,4 +218,4 @@ bindsym $mod+p mode "resize"
 # finds out, if available)
 #bar {
 #        status_command i3status
-#}
+#r

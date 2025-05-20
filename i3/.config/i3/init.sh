@@ -1,21 +1,40 @@
 #!/bin/sh
 
-4kFound=$(xrandr | grep '^DP-1 Connected')
+# Define cleanup function
+cleanup() {
+    echo "Script terminating, restoring default settings..."
+    exit 0
+}
 
-# -n asks if the string in the variable has a non-zero legnth.
-# use -z to check in the varibale has a length of zero.
-if [ -n "$4kFound" ] ; then
-	# xrandr command here for single 4k monitor
-	xrandr --output eDP-1 --off && \
-	xrandr --output DP-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal
-	#xrandr --output DP-1 --primary --mode 3840x2160 --pos 3840x0 --rotate normal
+# Trap signals
+trap cleanup INT TERM
 
-fi
+while true; do
+	DPFOUND=$(xrandr | grep '^DP-1 Connected')
+	if [ -n "$DPFOUND" ]; then
+		# Turn off internal monitor and enable 4k monitor
+		xrandr --output eDP-1 --off && \
+		xrandr --output DP-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal
+		# Full 4k Resolution
+		#xrandr --output DP-1 --primary --mode 3840x2160 --pos 3840x0 --rotate normal
+	else
+		# Internal monitor only:
+		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
+	fi
 
-# Force US keyborad layout for ZSA Voyager:
-LAYOUT=${1:-"us"}
-VARIANT=${2:-""}
-setxkbmap "$LAYOUT" "$VARIANT";
+	ZSAVOY=$(lsusb | grep 'ZSA Technology Labs Voyager')
+	if [ -n "$ZSAVOY" ]; then
+		# Force US keyborad layout for ZSA Voyager:
+		LAYOUT=${1:-"us"}
+		VARIANT=${2:-""}
+		setxkbmap "$LAYOUT" "$VARIANT";
+	else
+		# Programmer Dvorak for built in keyboard:
+		LAYOUT=${1:-"us"}
+		VARIANT=${2:-"dvp"}
+		setxkbmap "$LAYOUT" "$VARIANT";
+	fi
 
-exit 0;
+	sleep 5
+done
 
