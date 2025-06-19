@@ -26,15 +26,7 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	-- Configure any other settings here. See the documentation for more details.
-	-- colorscheme that will be used when installing plugins.
-	-- install = { colorscheme = { "everforest" } },
-	-- automatically check for plugin updates
-	-- checker = { enabled = false },
 })
 
 -- Ensure Mason is installed
 require("mason").setup()
-
--- Colors defined in plugins/colors.lua
-vim.cmd("colorscheme everforest")
