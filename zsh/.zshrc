@@ -41,6 +41,7 @@ alias ezsh="nvim ~/.zshrc"
 alias telegram="flatpak run org.telegram.desktop </dev/null &>/dev/null &; disown; exit 0;"
 alias cdlsq="cd go/src/github.com/jrswab/lsq"
 alias cdguild="cd go/src/github.com/jrswab/guild"
+alias redshift="redshift -l 40.44:-79.99"
 
 # Git Shortcuts:
 alias gbd='git branch --merged | grep -Ev "(^\*|^\+|master|main|dev)" | xargs --no-run-if-empty git branch -d'

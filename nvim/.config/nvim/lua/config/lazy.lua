@@ -29,4 +29,4 @@ require("lazy").setup({
 })
 
 -- Ensure Mason is installed
-require("mason").setup()
+--require("mason").setup()

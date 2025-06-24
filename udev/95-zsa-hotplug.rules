@@ -1,0 +1,2 @@
+# ZSA Voyager keyboard events
+SUBSYSTEM=="usb", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1977", ATTRS{manufacturer}=="ZSA Technology Labs", ATTRS{product}=="Voyager", ACTION=="bind|remove", RUN+="/usr/local/bin/zsa-hw-switch.sh"

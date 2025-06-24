@@ -9,10 +9,10 @@ return {
 		require("everforest").setup({
 			-- “Calm the rainbow”
 			colours_override = function(palette)
-				local calm     = "#D3C6AA"
+				local calm = "#D3C6AA"
 
-				palette.aqua   = calm
-				palette.blue   = calm
+				palette.aqua = calm
+				palette.blue = calm
 				palette.purple = calm
 				-- (red, yellow, orange and green stay as-is)
 			end,
