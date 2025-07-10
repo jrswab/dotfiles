@@ -20,9 +20,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
 
 # User Bins
-export PATH=$PATH:$HOME/jaron/bin:$HOME/bin:$HOME/go/bin:$HOME/bin/nvim/bin
-# Used by Claude Code
-#export PATH=$PATH:$HOME/.config/nvm/versions/node/v20.9.0/bin
+export PATH=$PATH:$HOME/bin:$HOME/go/bin:$HOME/bin/nvim/bin:$HOME/.local/bin
 # System Defauts
 export PATH=$PATH:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
 
@@ -42,6 +40,9 @@ alias telegram="flatpak run org.telegram.desktop </dev/null &>/dev/null &; disow
 alias cdlsq="cd go/src/github.com/jrswab/lsq"
 alias cdguild="cd go/src/github.com/jrswab/guild"
 alias redshift="redshift -l 40.44:-79.99"
+alias python="python3"
+
+alias sshx220="ssh jaron@192.168.1.153"
 
 # Git Shortcuts:
 alias gbd='git branch --merged | grep -Ev "(^\*|^\+|master|main|dev)" | xargs --no-run-if-empty git branch -d'
