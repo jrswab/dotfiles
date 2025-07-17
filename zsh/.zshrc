@@ -41,6 +41,7 @@ alias cdlsq="cd go/src/github.com/jrswab/lsq"
 alias cdguild="cd go/src/github.com/jrswab/guild"
 alias redshift="redshift -l 40.44:-79.99"
 alias python="python3"
+alias aider="aider --config $HOME/.config/aider.conf.yml"
 
 alias sshx220="ssh jaron@192.168.1.153"
 

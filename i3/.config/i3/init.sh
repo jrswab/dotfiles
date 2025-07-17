@@ -33,6 +33,9 @@ while true; do
 		LAYOUT=${1:-"us"}
 		VARIANT=${2:-"dvp"}
 		setxkbmap "$LAYOUT" "$VARIANT";
+
+		# Enable "middle"/"two finger" click with the trackpad:
+		xinput set-prop "ELAN0412:00 04F3:311D Touchpad" "libinput Click Method Enabled" 0 1
 	fi
 
 	sleep 5

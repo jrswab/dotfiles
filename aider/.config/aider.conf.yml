@@ -4,7 +4,7 @@
 # API Keys and settings:
 
 ## Specify the OpenAI API key
-openai-api-key: xxx
+openai-api-key: 
 
 
 #################

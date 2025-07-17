@@ -15,6 +15,16 @@ return {
 		local servers = {
 			gopls = { filetypes = { "go" } },
 			templ = { filetypes = { "templ" } },
+			harper_ls = {
+				settings = {
+					["harper-ls"] = {
+						linters = {
+							SentenceCapitalization = false,
+							SpellCheck = false,
+						},
+					},
+				},
+			},
 			lua_ls = {
 				settings = {
 					Lua = {
